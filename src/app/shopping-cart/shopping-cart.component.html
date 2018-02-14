@@ -1,0 +1,31 @@
+<!-- <div style="opacity: 0.75; height: 500px">
+  shopping-cart works!
+<div> -->
+ 
+ <div class="cart row overlay-content" [style.display]="setStyle()">
+  <div class="container">
+    <div class="small-12 cart-container text-justify">
+      <div class="page-header">
+      <h1 class="heading">Your Cart</h1></div>
+      <ul class="cart-items-list" *ngIf="shoppingCartItems.length > 0 ; else loading">
+        <li *ngFor="let cartItem of shoppingCartItems" class="cart-item-container">
+          <table class="table">
+              <tbody>
+                <tr>
+                 
+                  <td align="left"><img src="./assets/images/{{cartItem.filename}}" width="50" height="50"/></td>
+                  <td align="right"><p>{{cartItem.name}}</p><br/>
+                    <p>{{cartItem.price/100 | currency:'USD':code}}</p></td>
+                </tr>
+              </tbody>
+            </table>
+        </li>
+
+      </ul>
+      <ng-template #loading class="text-justify">Nothing in your cart, <br/> start shopping!</ng-template>
+      <div class="dividerline"></div>     
+      <div class="total">Total: {{getTotal()| async | currency:'USD':code }}</div>
+      <button type="button" class="btn btn-light text-justify" (click)="closeCart =!closeCart">Back</button>
+    </div>
+  </div>
+</div> 

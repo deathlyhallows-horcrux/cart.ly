@@ -1,0 +1,32 @@
+<!-- <p>
+  store works!
+</p> -->
+<div class="store row">
+    <div class="small-12 medium-8 columns">
+      <div class="page-header">
+        <h1>Shop our featured collection</h1>
+      </div>
+      <ul class="product-list">
+        <li *ngFor="let product of products | async"
+            class="product-container">
+            <div class="row">
+              <div class="medium-4 columns text-center">
+                <img src="./assets/images/{{product.filename}}" width="200"
+                     class="product_image"/><br/>
+                     <h4>
+                        <span class="product-name">{{product.name}}</span><br/>
+                        <small class="product-price">{{product.price/100 | currency:'USD':true}}</small>
+                      </h4>
+                     
+                      <button type="button"
+                              class="btn btn-primary"
+                              (click)="addProductToCart(product, 1)">Add To Cart</button>
+              </div>
+      
+            </div>
+        </li>
+      </ul>
+    </div>
+</div>
+<!-- <app-shopping-cart></app-shopping-cart>
+   -->

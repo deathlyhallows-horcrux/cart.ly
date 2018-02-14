@@ -1,0 +1,52 @@
+.cart{
+    justify-content: center;
+    height: fill;
+    font-family: lato font;
+    /* color: darkgray; */
+}
+.cart-container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.heading{
+    font-size: 20px;
+    padding: 1em;
+    font-weight: bold;
+}
+.dividerline{
+    border-bottom: 1px solid gray;
+    width: 100%;
+    margin-top:1em;
+}
+.total{
+    text-align: left;
+    font-weight: bold;
+    padding: 1em;
+}
+.btn{
+    background-color: transparent;
+    font-family: lato font;
+    color:gray;
+    border-radius: 5px;
+    border: solid;
+}
+.cart-items-list{
+    list-style: none;
+    padding: 0;
+}
+table td p{
+    margin-bottom: 0;
+}
+.hide{
+    width: 0;
+}

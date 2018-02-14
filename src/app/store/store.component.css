@@ -1,0 +1,43 @@
+.store{
+    width:100%;
+    justify-content: center;
+    margin: 0;
+    padding: 1em;
+}
+.store h3{
+    font-family: lato font;
+}
+.product-list{
+    max-width: 1000px;
+    display: inline-flex;
+    flex-flow: row wrap;
+    list-style-type: none;
+    padding-left: 0
+    /* justify-content: space-around; */
+}
+.product-container{
+    /* width: 25%; */
+    /* border: solid; */
+    margin: 1em;
+    padding: 1em;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    box-shadow: 0px 1px 2px #ccc;
+}
+.product-price, .product-name{
+    font-size: 15px;
+    font-family: lato font;
+    color: gray;
+}
+button.btn.btn-primary {
+    background-color: transparent;
+    font-family: lato font;
+    color:gray;
+    border-radius: 5px;
+    border: 1.2px solid;
+}
+.page-header h1{
+    font-size: 25px;
+    font-family: lato font;
+}
+
