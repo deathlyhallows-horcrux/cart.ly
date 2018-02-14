@@ -24,7 +24,7 @@
       </ul>
       <ng-template #loading class="text-justify">Nothing in your cart, <br/> start shopping!</ng-template>
       <div class="dividerline"></div>     
-      <div class="total">Total: {{getTotal()| async | currency:'USD':code }}</div>
+      <div class="total">Total: {{getTotal()| async | currency:'USD': true }}</div>
       <button type="button" class="btn btn-light text-justify" (click)="closeCart =!closeCart">Back</button>
     </div>
   </div>
