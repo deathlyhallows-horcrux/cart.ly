@@ -14,7 +14,7 @@ export class ProductsService {
   getALLProducts(): Observable<Product[]> {
     try {
     return this.http
-                    .get('../assets/product-payload.json')
+                    .get('./assets/product-payload.json')
                     .map((data) => {
                       // console.log(data.json);
                       return data.json(); } );
