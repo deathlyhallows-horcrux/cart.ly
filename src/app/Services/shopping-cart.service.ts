@@ -23,7 +23,7 @@ export class ShoppingCartService {
   //recent data share
   changeMessage(message: string) {
     this.messageSource.next(message)
-    //console.log("message changes", message)
+    console.log("message changes", message)
   }
 
   public getCartItems(): Observable<Product[]> {

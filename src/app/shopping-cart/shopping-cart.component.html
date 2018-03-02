@@ -2,7 +2,7 @@
   shopping-cart works!
 <div> -->
  
- <div class="cart row overlay-content" [style.display]="setStyle()">
+ <div class="cart row overlay-content">
   <div class="container">
     <div class="small-12 cart-container text-justify">
       <div class="page-header">
@@ -25,7 +25,7 @@
       <ng-template #loading class="text-justify">Nothing in your cart, <br/> start shopping!</ng-template>
       <div class="dividerline"></div>     
       <div class="total">Total: {{getTotal()| async | currency:'USD': true }}</div>
-      <button type="button" class="btn btn-light text-justify" (click)="closeCart =!closeCart">Back</button>
+      <button type="button" class="btn btn-light text-justify" (click)="closeCart()">Back</button>
     </div>
   </div>
 </div> 

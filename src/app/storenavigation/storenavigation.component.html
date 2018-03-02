@@ -1,0 +1,30 @@
+<nav class="navbar navbar-default navbar-fixed-top navbar-light bg-primary">
+  
+   <div class="container-fluid">
+       
+       <a class="navbar-brand text-white fa fa-shopping-cart" href="#">  Cart.ly</a>
+     
+       <ul class="navbar-nav mr-auto">
+           <ul class="navbar-nav">
+               <li class="nav-item">
+                   <a routerLink="/store" routerLinkActive="active" class="text-white">Shop</a>
+               </li>
+           </ul>
+       </ul>
+       <ul class="navbar-nav">
+           <li class="nav-item ">
+               <div class="cart-button text-white" #cartbutton (click)="showStyle =!showStyle;">Your Cart</div>
+              
+           </li>
+       </ul>
+       <ul class="navbar-nav">
+             <li class="nav-item ">
+                     <a class="productnumber">{{(shoppingCartItems | async).length}}</a>                      
+             </li>
+         </ul>     
+   </div> 
+ </nav>
+
+ <!-- <div [ngStyle]="setStyle()">   -->
+  <app-shopping-cart class="overlay" [ngClass]="{show: showStyle,  hide: !showStyle}"></app-shopping-cart>
+<!-- </div> -->

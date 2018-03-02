@@ -23,9 +23,9 @@ export class AppComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit() {
-    this.shoppingCartService.currentMessage.subscribe(message => setTimeout(() => this.message = message, 0));
-    
+    this.shoppingCartService.currentMessage.subscribe(message => setTimeout(() => this.message = message, 0));    
   }
+  
   ngAfterViewInit(){
 
   }

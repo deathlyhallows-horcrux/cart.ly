@@ -9,13 +9,15 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { AppRoutingModule } from './app.routing';
 import { ProductsService } from './Services/products.service';
 import { ShoppingCartService } from './Services/shopping-cart.service';
+import { StoreNavigationComponent } from './storenavigation/storenavigation.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     StoreComponent,
-    ShoppingCartComponent
+    ShoppingCartComponent,
+    StoreNavigationComponent
   ],
   imports: [
     BrowserModule,

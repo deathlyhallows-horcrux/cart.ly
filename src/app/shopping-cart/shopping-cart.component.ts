@@ -13,7 +13,7 @@ export class ShoppingCartComponent implements OnInit {
 
   public shoppingCart: Observable<Product[]> = of([]);
   public shoppingCartItems: Product[] = [];
-  public closeCart = false;
+ // public closeCart = false;
   message: string ;
 
   constructor(private shoppingCartService: ShoppingCartService) {
@@ -32,14 +32,14 @@ export class ShoppingCartComponent implements OnInit {
     return this.shoppingCartService.calculateShoppingCartTotal().combineLatest( x => x / 100);
   }
   
-  // cartClose(){
-  //   this.newMessage("none");
-  // }
+  closeCart(event){
+    this.shoppingCartService.changeMessage("close");
+  }
 
   //overlay displays style
   setStyle(): string {
     if(this.closeCart){ 
-       this.newMessage("none");
+      // this.newMessage("none");
       return "";
     } 
       else {return "";}
